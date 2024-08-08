@@ -1,0 +1,906 @@
+
+>>> 2024/08/08-14:20:02.746  [start@/opt/aster146/lib/python3.8/site-packages/asrun/main.py:69]
+Command line run on 'WIN-GMJLJ727QD5.akvagroup.com'
+using python executable '/usr/bin/python3' :
+['/opt/aster146/bin/as_run', 'ASTERRUN.export']
+
+>>> 2024/08/08-14:20:02.746  [__init__@/opt/aster146/lib/python3.8/site-packages/asrun/system.py:194]
+AsterSystem param :
+{'remote_copy_protocol': 'SCP', 'remote_shell_protocol': 'SSH'}
+
+>>> 2024/08/08-14:20:02.746  [Shell@/opt/aster146/lib/python3.8/site-packages/asrun/system.py:519]
+remote command ( <> WIN-GMJLJ727QD5 and hui <> hui) ? False
+
+>>> 2024/08/08-14:20:02.746  [GetMemInfo@/opt/aster146/lib/python3.8/site-packages/asrun/system.py:877]
+cmd :
+cat /proc/meminfo
+background : False
+follow_output : False
+
+>>> 2024/08/08-14:20:02.751  [GetMemInfo@/opt/aster146/lib/python3.8/site-packages/asrun/system.py:884]
+GetMemInfo 'memtotal' returns : 31916
+
+>>> 2024/08/08-14:20:02.751  [Shell@/opt/aster146/lib/python3.8/site-packages/asrun/system.py:519]
+remote command ( <> WIN-GMJLJ727QD5 and hui <> hui) ? False
+
+>>> 2024/08/08-14:20:02.751  [GetCpuInfo@/opt/aster146/lib/python3.8/site-packages/asrun/system.py:855]
+cmd :
+cat /proc/cpuinfo
+background : False
+follow_output : False
+
+>>> 2024/08/08-14:20:02.752  [GetCpuInfo@/opt/aster146/lib/python3.8/site-packages/asrun/system.py:863]
+GetCpuInfo 'numcpu' returns : 20
+
+>>> 2024/08/08-14:20:02.753  [get_limits@/opt/aster146/lib/python3.8/site-packages/asrun/common_func.py:177]
+Limits returned :
+{'interactif_memmax': 31916,
+ 'interactif_mpi_nbpmax': 32,
+ 'interactif_nbpmax': 20,
+ 'interactif_tpsmax': '9999:00:00'}
+
+>>> 2024/08/08-14:20:02.753  [get_limits@/opt/aster146/lib/python3.8/site-packages/asrun/common_func.py:177]
+Limits returned :
+{'batch_memmax': 31916,
+ 'batch_mpi_nbpmax': 32,
+ 'batch_nbpmax': 20,
+ 'batch_tpsmax': '9999:00:00'}
+
+>>> 2024/08/08-14:20:02.753  [PostConf@/opt/aster146/lib/python3.8/site-packages/asrun/run.py:582]
+installation dirs (aster_root, confdir, localedir, LANG)
+/opt/aster146
+/opt/aster146/etc/codeaster
+/opt/aster146/share/locale
+C.UTF-8
+
+>>> 2024/08/08-14:20:02.753  [RunAster@/opt/aster146/lib/python3.8/site-packages/asrun/execute.py:152]
+source list : ('ASTERRUN.export',)
+destination : /tmp/astk_hui/hui-WIN-GMJLJ727QD5-profil_astk_213799
+
+>>> 2024/08/08-14:20:02.753  [RunAster@/opt/aster146/lib/python3.8/site-packages/asrun/execute.py:152]
+cmd :
+cp -L -r ASTERRUN.export /tmp/astk_hui/hui-WIN-GMJLJ727QD5-profil_astk_213799
+background : False
+follow_output : False
+
+>>> 2024/08/08-14:20:02.757  [_dbg@/opt/aster146/lib/python3.8/site-packages/asrun/profil.py:46]
+P memory_limit: 5102.0    P memjob: 5224448    A memjeveux: 637.75
+
+>>> 2024/08/08-14:20:02.757  [_dbg@/opt/aster146/lib/python3.8/site-packages/asrun/profil.py:46]
+P time_limit: 9000060.0    P tpsjob: 150002    A tpmax: 9000060.0
+
+>>> 2024/08/08-14:20:02.760  [_dbg@/opt/aster146/lib/python3.8/site-packages/asrun/profil.py:46]
+P memory_limit: 5102.0    P memjob: 5224448    A memjeveux: 637.75
+
+>>> 2024/08/08-14:20:02.760  [_dbg@/opt/aster146/lib/python3.8/site-packages/asrun/profil.py:46]
+P time_limit: 9000060.0    P tpsjob: 150002    A tpmax: 9000060.0
+
+>>> 2024/08/08-14:20:02.760  [RunAster@/opt/aster146/lib/python3.8/site-packages/asrun/execute.py:161]
+Input export : /tmp/astk_hui/hui-WIN-GMJLJ727QD5-profil_astk_213799
+AsterProfil object   = 0x7f4d69eb66a0
+.filename            = /tmp/astk_hui/hui-WIN-GMJLJ727QD5-profil_astk_213799
+P actions make_etude
+P aster_root /opt/aster146
+P consbtc oui
+P corefilesize unlimited
+P cpresok RESNOOK
+P debug nodebug
+P display UiSDesktop:0
+P facmtps 1
+P lang en
+P mclient UiSDesktop
+P memjob 5224448
+P memory_limit 5102.0
+P mode interactif
+P mpi_nbcpu 1
+P mpi_nbnoeud 1
+P nbmaxnook 5
+P ncpus 2
+P noeud UiSDesktop
+P nomjob astk
+P origine ASTK 2019.0.final
+P platform LINUX64
+P profastk hui@UiSDesktop:run.astk
+P protocol_copyfrom asrun.plugins.server.SCPServer
+P protocol_copyto asrun.plugins.server.SCPServer
+P protocol_exec asrun.plugins.server.SSHServer
+P proxy_dir /tmp
+P rep_trav /tmp/hui-RANDOMNUMBER
+P serveu
+[...]
+
+>>> 2024/08/08-14:20:02.761  [AsterBuild@/opt/aster146/lib/python3.8/site-packages/asrun/build.py:1421]
+version supports: ('use_numthreads', 'noresu', 'orbinitref', 'nocopy', 'waf')
+
+>>> 2024/08/08-14:20:02.761  [Shell@/opt/aster146/lib/python3.8/site-packages/asrun/system.py:519]
+remote command ( <> WIN-GMJLJ727QD5 and hui <> hui) ? False
+
+>>> 2024/08/08-14:20:02.761  [AddToEnv@/opt/aster146/lib/python3.8/site-packages/asrun/system.py:806]
+cmd :
+bash -c env
+background : False
+follow_output : False
+
+>>> 2024/08/08-14:20:02.764  [AddToEnv@/opt/aster146/lib/python3.8/site-packages/asrun/system.py:807]
+env_init
+SHELL=/bin/bash
+WSL2_GUI_APPS_ENABLED=1
+WSL_DISTRO_NAME=Ubuntu-20.04
+NAME=WIN-GMJLJ727QD5
+ASTER_ROOT=/opt/aster146
+PWD=/home/hui/Documents/gitHubREPO/membraneAster/AsterModel
+LOGNAME=hui
+_=/usr/bin/env
+MOTD_SHOWN=update-motd
+HOME=/home/hui
+WISHEXECUTABLE=/usr/bin/wish
+LANG=C.UTF-8
+WSL_INTEROP=/run/WSL/594_interop
+LS_COLORS=rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:
+WAYLAND_DISPLAY=wayland-0
+LESSCLOSE=/usr/bin/lesspipe %s %s
+PYTHONPATH=/opt/aster146/lib/python3.8/site-packages
+TERM=xterm-256color
+LESSOPEN=| /usr/bin/lesspipe %s
+USER=hui
+DISPLAY=:0
+SHLVL=2
+ASTER_VERSION_DIR=/opt/aster146/14.6/share/aster
+ASTER_TMPDIR=/tmp
+LD_LIBRARY_PATH=/usr/lib
+XDG_RUNTIME_DIR=/run/user/1000/
+WSLENV=
+XDG_DATA_DIRS=/usr/local/share:/usr/share:/var/lib/snapd/desktop
+PATH=/opt/aster146/bin:/opt/aster146/outils:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/Program Files (x86)/Common Files/Intel/Shared Libraries/intel64/libfabric/bin/:/mnt/c/Program Files (x86)/Common Files/Intel/Shared Libraries/intel64/libfabric/bin/utils:/mnt/c/Program Files (x86)/Common Files/Intel/Shared Libraries/intel64/bin:/mnt/c/Program Files (x86)/Common Files/Intel/Shared Libraries/ia32:/mnt/c/Program Files (x86)/Common Files/Intel/Shared Libraries/intel64:/mnt/c/Program Files (x86)/Common Files/Intel/Shared Libraries/:/mnt/c/Windows/system32:/mnt/c/Windows:/mnt/c/Windows/System32/Wbem:/mnt/c/Windows/System32/WindowsPowerShell/v1.0/:/mnt/c/Windows/System32/OpenSSH/:/mnt/c/Program Files/dotnet/:/mnt/c/Program Files (x86)/Windows Kits/8.1/Windows Performance Toolkit/:/mnt/c/Program Files (x86)/Bitvise SSH Client:/mnt/c/Program Files/Git/cmd:/mnt/c/Users/hcheng/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/hcheng/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Users/hcheng/.dotnet/tools:/mnt/c/Program Files/Aquastructures/AquaSim:/snap/bin
+DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000/bus
+HOSTTYPE=x86_64
+PULSE_SERVER=unix:/mnt/wslg/PulseServer
+PYTHONEXECUTABLE=/usr/bin/python3
+ASTER_ETC=/opt/aster146/etc
+OLDPWD=/home/hui/Documents/gitHubREPO/membraneAster
+
+
+>>> 2024/08/08-14:20:02.764  [Shell@/opt/aster146/lib/python3.8/site-packages/asrun/system.py:519]
+remote command ( <> WIN-GMJLJ727QD5 and hui <> hui) ? False
+
+>>> 2024/08/08-14:20:02.764  [AddToEnv@/opt/aster146/lib/python3.8/site-packages/asrun/system.py:813]
+cmd :
+bash -c ". /opt/aster146/14.6/share/aster/profile.sh && env"
+background : False
+follow_output : False
+
+>>> 2024/08/08-14:20:02.771  [AddToEnv@/opt/aster146/lib/python3.8/site-packages/asrun/system.py:814]
+env_prof
+SHELL=/bin/bash
+WSL2_GUI_APPS_ENABLED=1
+WSL_DISTRO_NAME=Ubuntu-20.04
+NAME=WIN-GMJLJ727QD5
+ASTER_ROOT=/opt/aster146
+PWD=/home/hui/Documents/gitHubREPO/membraneAster/AsterModel
+ASTER_DATADIR=/opt/aster146/14.6/share/aster
+LOGNAME=hui
+MOTD_SHOWN=update-motd
+HOME=/home/hui
+WISHEXECUTABLE=/usr/bin/wish
+LANG=C.UTF-8
+WSL_INTEROP=/run/WSL/594_interop
+LS_COLORS=rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:
+WAYLAND_DISPLAY=wayland-0
+ASTER_LIBDIR=/opt/aster146/14.6/lib/aster
+LESSCLOSE=/usr/bin/lesspipe %s %s
+PYTHONPATH=.:/opt/aster146/14.6/lib/aster:/home/hui/aster-full-src-14.6.0:/opt/aster146/lib/python3.8/site-packages:/opt/aster146/public/tfel-3.2.1/lib/python3.8/site-packages:/usr/lib/python3/dist-packages:/opt/aster146/lib/python3.8/site-packages
+TERM=xterm-256color
+ASTER_LOCALEDIR=/opt/aster146/14.6/share/locale/aster
+PYTHONHOME=/usr
+LESSOPEN=| /usr/bin/lesspipe %s
+USER=hui
+DISPLAY=:0
+SHLVL=2
+ASTER_VERSION_DIR=/opt/aster146/14.6/share/aster
+ASTER_TMPDIR=/tmp
+LD_LIBRARY_PATH=.:/opt/aster146/14.6/lib/aster:/opt/aster146/public/hdf5-1.10.3/lib:/opt/aster146/public/med-4.0.0/lib:/opt/aster146/public/mumps-5.1.2/lib:/opt/aster146/public/metis-5.1.0/lib:/opt/aster146/public/tfel-3.2.1/lib:/opt/aster146/public/scotch-6.0.4/lib:/opt/aster146/public/hdf5-1.10.3/lib64:/opt/aster146/public/med-4.0.0/lib64:/opt/aster146/14.6/lib:/home/hui/aster-full-src-14.6.0:/usr:/usr/lib/gcc/x86_64-linux-gnu/9:/usr/lib/python3.8/config-3.8-x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/opt/aster146/public/tfel-3.2.1:/opt/aster146/14.6/lib/aster:/usr/lib
+XDG_RUNTIME_DIR=/run/user/1000/
+WSLENV=
+XDG_DATA_DIRS=/usr/local/share:/usr/share:/var/lib/snapd/desktop
+PATH=/usr/bin:/opt/aster146/bin:/opt/aster146/outils:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/Program Files (x86)/Common Files/Intel/Shared Libraries/intel64/libfabric/bin/:/mnt/c/Program Files (x86)/Common Files/Intel/Shared Libraries/intel64/libfabric/bin/utils:/mnt/c/Program Files (x86)/Common Files/Intel/Shared Libraries/intel64/bin:/mnt/c/Program Files (x86)/Common Files/Intel/Shared Libraries/ia32:/mnt/c/Program Files (x86)/Common Files/Intel/Shared Libraries/intel64:/mnt/c/Program Files (x86)/Common Files/Intel/Shared Libraries/:/mnt/c/Windows/system32:/mnt/c/Windows:/mnt/c/Windows/System32/Wbem:/mnt/c/Windows/System32/WindowsPowerShell/v1.0/:/mnt/c/Windows/System32/OpenSSH/:/mnt/c/Program Files/dotnet/:/mnt/c/Program Files (x86)/Windows Kits/8.1/Windows Performance Toolkit/:/mnt/c/Program Files (x86)/Bitvise SSH Client:/mnt/c/Program Files/Git/cmd:/mnt/c/Users/hcheng/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/hcheng/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Users/hcheng/.dotnet/tools:/mnt/c/Program Files/Aquastructures/AquaSim:/snap/bin
+DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000/bus
+ASTER_ELEMENTSDIR=/opt/aster146/14.6/lib/aster
+HOSTTYPE=x86_64
+PULSE_SERVER=unix:/mnt/wslg/PulseServer
+PYTHONEXECUTABLE=/usr/bin/python3
+ASTER_ETC=/opt/aster146/etc
+OLDPWD=/home/hui/Documents/gitHubREPO/membraneAster
+_=/usr/bin/env
+
+
+>>> 2024/08/08-14:20:02.771  [AddToEnv@/opt/aster146/lib/python3.8/site-packages/asrun/system.py:822]
+AddToEnv set : ASTER_DATADIR=/opt/aster146/14.6/share/aster
+
+>>> 2024/08/08-14:20:02.771  [AddToEnv@/opt/aster146/lib/python3.8/site-packages/asrun/system.py:822]
+AddToEnv set : ASTER_LIBDIR=/opt/aster146/14.6/lib/aster
+
+>>> 2024/08/08-14:20:02.771  [AddToEnv@/opt/aster146/lib/python3.8/site-packages/asrun/system.py:822]
+AddToEnv set : PYTHONPATH=.:/opt/aster146/14.6/lib/aster:/home/hui/aster-full-src-14.6.0:/opt/aster146/lib/python3.8/site-packages:/opt/aster146/public/tfel-3.2.1/lib/python3.8/site-packages:/usr/lib/python3/dist-packages:/opt/aster146/lib/python3.8/site-packages
+
+>>> 2024/08/08-14:20:02.772  [AddToEnv@/opt/aster146/lib/python3.8/site-packages/asrun/system.py:822]
+AddToEnv set : ASTER_LOCALEDIR=/opt/aster146/14.6/share/locale/aster
+
+>>> 2024/08/08-14:20:02.772  [AddToEnv@/opt/aster146/lib/python3.8/site-packages/asrun/system.py:822]
+AddToEnv set : PYTHONHOME=/usr
+
+>>> 2024/08/08-14:20:02.772  [AddToEnv@/opt/aster146/lib/python3.8/site-packages/asrun/system.py:822]
+AddToEnv set : LD_LIBRARY_PATH=.:/opt/aster146/14.6/lib/aster:/opt/aster146/public/hdf5-1.10.3/lib:/opt/aster146/public/med-4.0.0/lib:/opt/aster146/public/mumps-5.1.2/lib:/opt/aster146/public/metis-5.1.0/lib:/opt/aster146/public/tfel-3.2.1/lib:/opt/aster146/public/scotch-6.0.4/lib:/opt/aster146/public/hdf5-1.10.3/lib64:/opt/aster146/public/med-4.0.0/lib64:/opt/aster146/14.6/lib:/home/hui/aster-full-src-14.6.0:/usr:/usr/lib/gcc/x86_64-linux-gnu/9:/usr/lib/python3.8/config-3.8-x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/opt/aster146/public/tfel-3.2.1:/opt/aster146/14.6/lib/aster:/usr/lib
+
+>>> 2024/08/08-14:20:02.772  [AddToEnv@/opt/aster146/lib/python3.8/site-packages/asrun/system.py:822]
+AddToEnv set : PATH=/usr/bin:/opt/aster146/bin:/opt/aster146/outils:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/Program Files (x86)/Common Files/Intel/Shared Libraries/intel64/libfabric/bin/:/mnt/c/Program Files (x86)/Common Files/Intel/Shared Libraries/intel64/libfabric/bin/utils:/mnt/c/Program Files (x86)/Common Files/Intel/Shared Libraries/intel64/bin:/mnt/c/Program Files (x86)/Common Files/Intel/Shared Libraries/ia32:/mnt/c/Program Files (x86)/Common Files/Intel/Shared Libraries/intel64:/mnt/c/Program Files (x86)/Common Files/Intel/Shared Libraries/:/mnt/c/Windows/system32:/mnt/c/Windows:/mnt/c/Windows/System32/Wbem:/mnt/c/Windows/System32/WindowsPowerShell/v1
+[...]
+
+>>> 2024/08/08-14:20:02.772  [AddToEnv@/opt/aster146/lib/python3.8/site-packages/asrun/system.py:822]
+AddToEnv set : ASTER_ELEMENTSDIR=/opt/aster146/14.6/lib/aster
+
+>>> 2024/08/08-14:20:02.772  [RunAster@/opt/aster146/lib/python3.8/site-packages/asrun/execute.py:201]
+set_rep_trav(/tmp/hui-RANDOMNUMBER) > local=/tmp/hui-RANDOMNUMBER, global=/tmp/hui-RANDOMNUMBER
+
+>>> 2024/08/08-14:20:02.775  [_dbg@/opt/aster146/lib/python3.8/site-packages/asrun/profil.py:46]
+P memory_limit: 5102.0    P memjob: 5224448    A memjeveux: 637.75
+
+>>> 2024/08/08-14:20:02.776  [_dbg@/opt/aster146/lib/python3.8/site-packages/asrun/profil.py:46]
+P time_limit: 9000060.0    P tpsjob: 150002    A tpmax: 9000060.0
+
+>>> 2024/08/08-14:20:02.776  [RunAster@/opt/aster146/lib/python3.8/site-packages/asrun/execute.py:208]
+source list : ('/tmp/astk_hui/hui-WIN-GMJLJ727QD5-profil_astk_213799',)
+destination : ASTERRUN.export
+
+>>> 2024/08/08-14:20:02.776  [RunAster@/opt/aster146/lib/python3.8/site-packages/asrun/execute.py:208]
+cmd :
+cp -L -r /tmp/astk_hui/hui-WIN-GMJLJ727QD5-profil_astk_213799 ASTERRUN.export
+background : False
+follow_output : False
+
+>>> 2024/08/08-14:20:02.780  [RunAster@/opt/aster146/lib/python3.8/site-packages/asrun/execute.py:221]
+source list : ('/tmp/astk_hui/hui-WIN-GMJLJ727QD5-profil_astk_213799',)
+destination : /tmp/hui-RANDOMNUMBER/213799.export
+
+>>> 2024/08/08-14:20:02.780  [RunAster@/opt/aster146/lib/python3.8/site-packages/asrun/execute.py:221]
+cmd :
+cp -L -r /tmp/astk_hui/hui-WIN-GMJLJ727QD5-profil_astk_213799 /tmp/hui-RANDOMNUMBER/213799.export
+background : False
+follow_output : False
+
+>>> 2024/08/08-14:20:02.783  [RunAster@/opt/aster146/lib/python3.8/site-packages/asrun/execute.py:402]
+Start make_etude/make_env/make_dbg action
+
+>>> 2024/08/08-14:20:02.784  [copyfileD@/opt/aster146/lib/python3.8/site-packages/asrun/execution.py:574]
+source list : ('/home/hui/Documents/gitHubREPO/membraneAster/AsterModel/inputMesh.med',)
+destination : fort.20
+
+>>> 2024/08/08-14:20:02.784  [copyfileD@/opt/aster146/lib/python3.8/site-packages/asrun/execution.py:574]
+cmd :
+cp -L -r /home/hui/Documents/gitHubREPO/membraneAster/AsterModel/inputMesh.med fort.20
+background : False
+follow_output : False
+
+>>> 2024/08/08-14:20:02.786  [Shell@/opt/aster146/lib/python3.8/site-packages/asrun/system.py:519]
+remote command ( <> WIN-GMJLJ727QD5 and hui <> hui) ? False
+
+>>> 2024/08/08-14:20:02.786  [_check_filetype@/opt/aster146/lib/python3.8/site-packages/asrun/system.py:711]
+cmd :
+file fort.20
+background : False
+follow_output : False
+
+>>> 2024/08/08-14:20:02.788  [copyfileD@/opt/aster146/lib/python3.8/site-packages/asrun/execution.py:574]
+source list : ('/home/hui/Documents/gitHubREPO/membraneAster/AsterModel/inputAster.comm',)
+destination : fort.1.1
+
+>>> 2024/08/08-14:20:02.788  [copyfileD@/opt/aster146/lib/python3.8/site-packages/asrun/execution.py:574]
+cmd :
+cp -L -r /home/hui/Documents/gitHubREPO/membraneAster/AsterModel/inputAster.comm fort.1.1
+background : False
+follow_output : False
+
+>>> 2024/08/08-14:20:02.791  [Shell@/opt/aster146/lib/python3.8/site-packages/asrun/system.py:519]
+remote command ( <> WIN-GMJLJ727QD5 and hui <> hui) ? False
+
+>>> 2024/08/08-14:20:02.791  [_check_filetype@/opt/aster146/lib/python3.8/site-packages/asrun/system.py:711]
+cmd :
+file fort.1.1
+background : False
+follow_output : False
+
+>>> 2024/08/08-14:20:02.799  [execute@/opt/aster146/lib/python3.8/site-packages/asrun/execution.py:101]
+version supports: waf (True), nosuperv (False), orbinitref (True), numthreads (True)
+
+>>> 2024/08/08-14:20:02.802  [Shell@/opt/aster146/lib/python3.8/site-packages/asrun/system.py:519]
+remote command ( <> WIN-GMJLJ727QD5 and hui <> hui) ? False
+
+>>> 2024/08/08-14:20:02.802  [execute@/opt/aster146/lib/python3.8/site-packages/asrun/execution.py:284]
+cmd :
+ls -la
+background : False
+follow_output : False
+
+>>> 2024/08/08-14:20:02.805  [SetLimit@/opt/aster146/lib/python3.8/site-packages/asrun/system.py:951]
+['core', 'RLIMIT_CORE', [-1, -1]]
+
+>>> 2024/08/08-14:20:02.805  [execute@/opt/aster146/lib/python3.8/site-packages/asrun/execution.py:345]
+source list : ('fort.1.1',)
+destination : fort.1
+
+>>> 2024/08/08-14:20:02.805  [execute@/opt/aster146/lib/python3.8/site-packages/asrun/execution.py:345]
+cmd :
+cp -L -r fort.1.1 fort.1
+background : False
+follow_output : False
+
+>>> 2024/08/08-14:20:02.806  [Shell@/opt/aster146/lib/python3.8/site-packages/asrun/system.py:519]
+remote command ( <> WIN-GMJLJ727QD5 and hui <> hui) ? False
+
+>>> 2024/08/08-14:20:02.807  [execute@/opt/aster146/lib/python3.8/site-packages/asrun/execution.py:377]
+cmd :
+( /opt/aster146/14.6/bin/aster /opt/aster146/14.6/lib/aster/Execution/E_SUPERV.py -commandes fort.1  --num_job=213799 --mode=interactif --rep_outils=/opt/aster146/outils --rep_mat=/opt/aster146/14.6/share/aster/materiau --rep_dex=/opt/aster146/14.6/share/aster/datg --numthreads=2 --suivi_batch --tpmax=9000060.0 --memjeveux=637.75 ; echo EXECUTION_CODE_ASTER_EXIT_213799=$? ) | tee fort.6 ; exit `grep -a EXECUTION_CODE_ASTER_EXIT_213799 fort.6 | head -1 | sed -e 's/EXECUTION_CODE_ASTER_EXIT_213799=//'`
+background : False
+follow_output : True
+
+>>> 2024/08/08-14:20:03.472  [local_shell@/opt/aster146/lib/python3.8/site-packages/asrun/system.py:333]
+    ERROR : iret = 1
+    +++ STANDARD OUTPUT:
+    # ------------------------------------------------------------------------------------------
+    # Impression du contenu du fichier de commandes à exécuter :
+    # ------------------------------------------------------------------------------------------
+    dt = 0.02
+    duration = 10
+    itimes = 500
+    tend = 10.0
+    loadr=[] 
+    DEBUT(PAR_LOT='NON',IGNORE_ALARM=('SUPERVIS_25', 'DISCRETE_26', 'UTILITAI8_56'))
+    
+    # read mesh
+    mesh = LIRE_MAILLAGE(UNITE=20)
+    listr = DEFI_LIST_REEL(DEBUT=0.0,
+                           INTERVALLE=_F(JUSQU_A=tend, PAS=dt))
+    
+    times = DEFI_LIST_INST(DEFI_LIST=_F(LIST_INST=listr, PAS_MINI=1e-8),
+                           METHODE='AUTO')
+    model = AFFE_MODELE(AFFE=(
+                                _F(GROUP_MA=('net' ),
+                                  MODELISATION=('MEMBRANE'),
+                                  PHENOMENE='MECANIQUE'),
+                                _F(GROUP_MA=('edge1','edge2','edge3','edge4'),
+                                  MODELISATION=('CABLE'),
+                                  PHENOMENE='MECANIQUE'), ),
+                         MAILLAGE=mesh)
+     
+    ## define element geometrical properties 
+    elemprop = AFFE_CARA_ELEM(
+                        POUTRE=( ),
+                            MEMBRANE=(
+                                    _F(GROUP_MA=('net'),
+                                       ANGL_REP_1=(0.0, 1.0),
+                                       ANGL_REP_2=(1.0, 0.0),
+                                       EPAIS=1,),),
+                            CABLE=( 
+                                    _F(GROUP_MA=('edge1','edge2','edge3','edge4'),
+                                       N_INIT=0.2,  
+                                       SECTION=0.000201,),),                  
+                    MODELE=model)
+    ## material base
+    
+    mat_1 = DEFI_MATERIAU(ELAS_MEMBRANE=_F(RHO=0.10252, # mass per unit area RHO (density)
+                                                #These coefficients have the dimension of a force per length.
+                                                M_LLLL=2100000000.0,   #Axial Stiffness along the x-axis.
+                                                M_TTTT=2100000000.0,   #Axial Stiffness along the y-axis.
+                                                M_LLLT=0.001,  #Shear Stiffness
+                                                M_LLTT=0.2,   #Coupling between normal stresses in different directions (x-direction stress influencing y-direction strain and vice versa).
+                                                M_LTLT=0.001,  #Coupling between normal stresses and shear strains
+                                                M_TTLT=0.001,  #Coupling between normal stresses and shear strains
+                                                ))
+    mat_5 = DEFI_MATERIAU(CABLE=_F(EC_SUR_E=0.0001),
+                                    ELAS=_F(E=2100000000.0,
+                                            NU=0.2,
+                                            RHO=910.0))
+    
+     ## assign material
+    fieldmat = AFFE_MATERIAU(AFFE=(
+                                _F(GROUP_MA=('net'),
+                                    MATER=(mat_1)),
+                                _F(GROUP_MA=('edge1','edge2','edge3','edge4'),
+                                    MATER=(mat_5)), ),
+                             MODELE=model)
+    
+    ### add load
+    gF = AFFE_CHAR_MECA(PESANTEUR=_F(DIRECTION=(0.0, 0.0, -1.0),
+                                     GRAVITE=9.81,),
+                            MODELE=model)
+    # fixed node
+    fixed = AFFE_CHAR_MECA(DDL_IMPO=_F(GROUP_NO=('edge1Node'),
+                                       DX=0,
+                                       DY=0,
+                                       DZ=0),
+                           MODELE=model)
+        
+    # point load on node
+    pload = AFFE_CHAR_MECA(FORCE_NODALE=( 
+                                        _F(GROUP_NO=('edge3Node'),
+                                        FX=0,
+                                        FY=-10,
+                                        FZ=0,
+                                        ),
+                                        ),
+                           MODELE=model)
+                      
+    loadr.append( _F(CHARGE=gF), )       
+    loadr.append( _F(CHARGE=fixed), )       
+    loadr.append( _F(CHARGE=pload), )
+    
+    # define the dynamic solver
+    
+    resn = DYNA_NON_LINE(CARA_ELEM=elemprop,
+                        CHAM_MATER=fieldmat,
+                        COMPORTEMENT=(_F(DEFORMATION='GROT_GDEP',
+                                         GROUP_MA=('edge1','edge2','edge3','edge4',
+                                                    ),
+                                         RELATION='CABLE'),),
+                        CONVERGENCE=_F(ITER_GLOB_MAXI=1000,
+                                       RESI_GLOB_RELA=0.0001 ),
+                        EXCIT=(loadr),
+                        SCHEMA_TEMPS=_F(FORMULATION='DEPLACEMENT',
+                                       SCHEMA="HHT",
+                                       ALPHA=-0.3,
+                                       ),
+                                       #add damping stablize the oscilations Need to study in the future
+                        INCREMENT=_F(LIST_INST=times),
+                        MODELE=model)
+        
+    # write results
+    IMPR_RESU(FORMAT='MED',
+              RESU=(_F(CARA_ELEM=elemprop,
+                       LIST_INST=listr,
+                       NOM_CHAM=('DEPL', 'SIEF_ELGA'),
+                       RESULTAT=resn,
+                       TOUT_CMP='OUI'),
+                    ),
+              UNITE=80)
+    
+    FIN()
+    
+    # ------------------------------------------------------------------------------------------
+    
+      Ouverture en écriture du fichier ./vola.1
+    
+     <INFO> Démarrage de l'exécution.
+                                                                                    
+                                                                                    
+                  -- CODE_ASTER -- VERSION : EXPLOITATION (stable) --               
+                                                                                    
+                         Version 14.6.0 modifiée le 11/06/2020                      
+                         révision b3490fa3b76c - branche 'v14'                      
+                             Copyright EDF R&D 1991 - 2024                          
+                                                                                    
+                        Exécution du : Thu Aug  8 14:20:03 2024                     
+                          Nom de la machine : WIN-GMJLJ727QD5                       
+                                  Architecture : 64bit                              
+                              Type de processeur : x86_64                           
+    Système d'exploitation : Linux-5.15.153.1-microsoft-standard-WSL2-x86_64-with-glibc2.29
+                            Langue des messages : en (UTF-8)                        
+                                                                                    
+                               Version de Python : 3.8.10                           
+                               Version de NumPy : 1.17.4                            
+       
+       !------------------------------------------------------------------------------------!
+       ! <A> <SUPERVIS2_2>                                                                  !
+       !                                                                                    !
+       !     Vous utilisez une vieille version de Code_Aster.                               !
+       !                                                                                    !
+       !     En mettant à jour votre version, vous bénéficierez des dernières améliorations !
+       !     apportées au code depuis 15 mois.                                              !
+       !     Si vous avez des développements privés, vous risquez d'avoir un travail        !
+       !     important de portage si vous ne suivez pas les mises à jour.                   !
+       !                                                                                    !
+       !                                                                                    !
+       ! Ceci est une alarme. Si vous ne comprenez pas le sens de cette                     !
+       ! alarme, vous pouvez obtenir des résultats inattendus !                             !
+       !------------------------------------------------------------------------------------!
+       
+                               Parallélisme MPI : inactif                           
+                              Parallélisme OpenMP : actif                           
+                            Nombre de processus utilisés : 2                        
+                         Version de la librairie HDF5 : 1.10.3                      
+                          Version de la librairie MED : 4.0.0                       
+                           Librairie MFront : non disponible                        
+                         Version de la librairie MUMPS : 5.1.2                      
+                            Librairie PETSc : non disponible                        
+                         Version de la librairie SCOTCH : 6.0.4                     
+    
+                      Mémoire limite pour l'exécution : 5102.00 Mo                  
+                       consommée par l'initialisation : 104.88 Mo                   
+                      par les objets du jeu de commandes : 0.00 Mo                  
+                     reste pour l'allocation dynamique : 4996.10 Mo                 
+                    Taille limite des fichiers d'échange : 48.00 Go                 
+                                                                                    
+    
+    .. __stg1_txt6
+      # ------------------------------------------------------------------------------------------
+      # Commande No :  0001            Concept de type : -
+      # ------------------------------------------------------------------------------------------
+      DEBUT(PAR_LOT='NON',
+            IGNORE_ALARM=('SUPERVIS_25', 'DISCRETE_26', 'UTILITAI8_56'),
+            IMPR_MACRO='NON',
+            DEBUG=_F(JXVERI='NON',
+                     SDVERI='NON',
+                     JEVEUX='NON',
+                     HIST_ETAPE='NON',),
+            MESURE_TEMPS=_F(NIVE_DETAIL=1,
+                            MOYENNE='NON',),
+            MEMOIRE=_F(TAILLE_BLOC=800.0,
+                       TAILLE_GROUP_ELEM=1000,),
+            RESERVE_CPU=_F(BORNE=900,),
+            INFO=1,)
+    
+       
+       !------------------------------------------------------------------------------------!
+       ! <A> <SUPERVIS_1>                                                                   !
+       !                                                                                    !
+       !  L'utilisation du mot-clé PAR_LOT='NON' permet d'accéder en lecture et en écriture !
+       !  au contenu des concepts Aster. De ce fait, votre étude est exclue du périmètre    !
+       !  qualifié de Code_Aster puisque toutes ses étapes ne peuvent être certifiées.      !
+       !                                                                                    !
+       !  Conseils :                                                                        !
+       !    - Il n'y a pas particulièrement de risque de résultat faux... sauf si votre     !
+       !      programmation l'introduit.                                                    !
+       !    - Distinguez le calcul lui-même (qui doit sans doute passer en PAR_LOT='OUI')   !
+       !      des post-traitements (qui nécessiteraient le mode PAR_LOT='NON') qui peuvent  !
+       !      être réalisés en POURSUITE.                                                   !
+       !                                                                                    !
+       !                                                                                    !
+       ! Ceci est une alarme. Si vous ne comprenez pas le sens de cette                     !
+       ! alarme, vous pouvez obtenir des résultats inattendus !                             !
+       !------------------------------------------------------------------------------------!
+       
+    
+      Valeur initiale du temps CPU maximum =   9000060 secondes
+      Valeur du temps CPU maximum passé aux commandes =   8999160 secondes
+      Réserve CPU prévue = 900 secondes
+    
+      Ouverture en écriture du fichier ./glob.1
+    
+      Ouverture en écriture du fichier ./vola.1
+    
+      Ouverture en lecture du fichier /opt/aster146/14.6/lib/aster/elem.1
+    
+         Nom de la base                          :  ELEMBASE
+         Créée avec la version                   :  14.06.00
+         Nombre d'enregistrements utilisés       :  43
+         Nombre d'enregistrements maximum        :  512
+         Longueur d'enregistrement (octets)      :  819200
+         Nombre d'identificateurs utilisés       :  123
+         Taille maximum du répertoire            :  300
+         Pourcentage d'utilisation du répertoire :  41 %
+    
+      Ouverture en lecture du fichier /opt/aster146/14.6/lib/aster/elem.1
+    
+    
+         Nom de la base                          :  ELEMBASE
+         Nombre d'enregistrements utilisés       :  43
+         Nombre d'enregistrements maximum        :  512
+         Longueur d'enregistrement (octets)      :  819200
+         Nombre total d'accès en lecture         :  60
+         Volume des accès en lecture             :         46.88 Mo.
+         Nombre total d'accès en écriture        :  0
+         Volume des accès en écriture            :          0.00 Mo.
+         Nombre d'identificateurs utilisés       :  123
+         Taille maximum du répertoire            :  300
+         Pourcentage d'utilisation du répertoire :  41 %
+    
+      Relecture des catalogues des éléments faite.
+    
+      Fin de lecture (durée  0.016399  s.) 
+      # Mémoire (Mo) :   150.27 /   142.48 /    44.29 /    22.92 (VmPeak / VmSize / Optimum / Minimum)
+      # Fin commande No : 0001   user+syst:        0.03s (syst:        0.02s, elaps:        0.02s)
+      # ------------------------------------------------------------------------------------------
+    
+    .. __stg1_txt9
+      # ------------------------------------------------------------------------------------------
+      # Commande No :  0002            Concept de type : maillage_sdaster
+      # ------------------------------------------------------------------------------------------
+      mesh = LIRE_MAILLAGE(UNITE=20,
+                           INFO_MED=1,
+                           FORMAT='MED',
+                           VERI_MAIL=_F(VERIF='OUI',
+                                        APLAT=1.E-3,),
+                           INFO=1,)
+    
+    Vérification du maillage.
+    
+    ------------ MAILLAGE mesh     - IMPRESSIONS NIVEAU  1 ------------
+    
+    JE-08-AOUT-2024 14:20:03                                                        
+    
+    NOMBRE DE NOEUDS                         441
+    
+    NOMBRE DE MAILLES                        480
+                                  SEG2                   80
+                                  QUAD4                 400
+    
+    NOMBRE DE GROUPES DE NOEUDS                8
+                                  allnodes                           441
+                                  edge1Node                           21
+                                  edge2Node                           21
+                                  edge3Node                           21
+                                  edge4Node                           21
+                                  n1                                   1
+                                  n2                                   1
+                                  n3                                   1
+    
+    NOMBRE DE GROUPES DE MAILLES               5
+                                  edge3                               20
+                                  edge1                               20
+                                  edge4                               20
+                                  edge2                               20
+                                  net                                400
+    
+    --------------------------------------------------------------------------------
+    
+      # Mémoire (Mo) :   150.27 /   144.44 /    44.29 /    22.92 (VmPeak / VmSize / Optimum / Minimum)
+      # Fin commande No : 0002   user+syst:        0.01s (syst:        0.00s, elaps:        0.01s)
+      # ------------------------------------------------------------------------------------------
+    
+    .. __stg1_txt10
+      # ------------------------------------------------------------------------------------------
+      # Commande No :  0004            Concept de type : listr8_sdaster
+      # ------------------------------------------------------------------------------------------
+      listr = DEFI_LIST_REEL(DEBUT=0.0,
+                             INTERVALLE=_F(JUSQU_A=10.0,
+                                           PAS=0.02,),
+                             INFO=1,)
+    
+      # Mémoire (Mo) :   150.27 /   144.44 /    44.29 /    22.92 (VmPeak / VmSize / Optimum / Minimum)
+      # Fin commande No : 0004   user+syst:        0.00s (syst:        0.00s, elaps:        0.00s)
+      # ------------------------------------------------------------------------------------------
+    
+    .. __stg1_txt13
+      # ------------------------------------------------------------------------------------------
+      # Commande No :  0005            Concept de type : list_inst
+      # ------------------------------------------------------------------------------------------
+      times = DEFI_LIST_INST(METHODE='AUTO',
+                             DEFI_LIST=_F(LIST_INST=listr,
+                                          PAS_MINI=1.E-08,
+                                          NB_PAS_MAXI=1000000,),
+                             ADAPTATION=_F(
+                                           NB_INCR_SEUIL=2,
+                                           NOM_PARA='NB_ITER_NEWTON',
+                                           CRIT_COMP='LE',
+                                           PCENT_AUGM=100.0,
+                                           EVENEMENT='SEUIL',
+                                           MODE_CALCUL_TPLUS='FIXE',),
+                             ECHEC=_F(SUBD_PAS=4,
+                                      SUBD_NIVEAU=3,
+                                      SUBD_PAS_MINI=0.0,
+                                      SUBD_METHODE='MANUEL',
+                                      ACTION='DECOUPE',
+                                      EVENEMENT='ERREUR',),
+                             INFO=1,)
+    
+    Gestion automatique de la liste d'instants.
+    Paramètres de la gestion automatique de la liste d'instants.
+    Pas minimum:         1E-12
+    Pas maximum:            10
+    Nombre de pas maximum: 1000000
+    La liste d'instants contient 501 pas de temps et le pas de temps minimum vaut          0.02.
+    Il y a 1 événements.
+    L'événement 1 est pour capturer les erreurs.
+    Si cet événement se déclenche, on découpe le pas de temps.
+    La découpe du pas de temps est manuel.
+    On découpe le pas de temps en 4 incréments jusqu'à ce que le niveau atteigne 3.
+    Il y a 1 schémas d'adaptations du pas de temps.
+    Le schéma d'adaptation 1 du pas de temps se déclenche pour un seuil donné.
+    Le seuil est franchi quand, 2 fois de suite, on fait exactement ou moins de 2314885530818453504 itérations de Newton.
+    Le mode de calcul de l'instant suivant est fixe.
+    Le pas de temps suivant sera modifié de 100.00 %.
+      # Mémoire (Mo) :   150.27 /   144.44 /    44.29 /    22.92 (VmPeak / VmSize / Optimum / Minimum)
+      # Fin commande No : 0005   user+syst:        0.02s (syst:        0.00s, elaps:        0.01s)
+      # ------------------------------------------------------------------------------------------
+    
+    .. __stg1_txt15
+      # ------------------------------------------------------------------------------------------
+      # Commande No :  0006            Concept de type : modele_sdaster
+      # ------------------------------------------------------------------------------------------
+      model = AFFE_MODELE(MAILLAGE=mesh,
+                          AFFE=(_F(GROUP_MA=('net', ),
+                                   PHENOMENE='MECANIQUE',
+                                   MODELISATION=('MEMBRANE', ),),
+                                _F(GROUP_MA=('edge1', 'edge2', 'edge3', 'edge4'),
+                                   PHENOMENE='MECANIQUE',
+                                   MODELISATION=('CABLE', ),),
+                                ),
+                          INFO=1,
+                          DISTRIBUTION=_F(PARTITIONNEUR='METIS',
+                                          METHODE='SOUS_DOMAINE',),
+                          VERI_JACOBIEN='OUI',)
+    
+    
+    Sur les 480 mailles du maillage mesh, on a demandé l'affectation de 480, on a pu en affecter 480
+     Modélisation     Type maille  Élément fini     Nombre
+     CABLE            SEG2         MECABL2          80
+     MEMBRANE         QUAD4        MEMBQU4          400
+    #2      Calculs elementaires et assemblages               CPU (USER+SYST/SYST/ELAPS):      0.00      0.00      0.00
+      # Mémoire (Mo) :   150.27 /   145.09 /    44.29 /    33.86 (VmPeak / VmSize / Optimum / Minimum)
+      # Fin commande No : 0006   user+syst:        0.00s (syst:        0.00s, elaps:        0.00s)
+      # ------------------------------------------------------------------------------------------
+    
+    
+      <I> Informations sur les temps d'exécution
+          Temps cpu user total                    0.17 s
+          Temps cpu systeme total                 0.03 s
+          Temps elapsed total                     0.20 s
+          Temps restant                     8999159.80 s
+    
+    
+      La signature de la base sauvegardée est (à l'adresse 0) :
+        f6eedcdca56b202ad1defd27a9034955161523ec
+    
+     ********************************************************************************
+     * COMMAND                  :       USER :     SYSTEM :   USER+SYS :    ELAPSED *
+     ********************************************************************************
+     * init (jdc)               :       0.17 :       0.03 :       0.20 :       0.21 *
+     *  . compile               :       0.00 :       0.00 :       0.00 :       0.00 *
+     *  . exec_compile          :       0.08 :       0.03 :       0.11 :       0.10 *
+     * DEBUT                    :       0.01 :       0.02 :       0.03 :       0.02 *
+     * LIRE_MAILLAGE            :       0.01 :       0.00 :       0.01 :       0.01 *
+     * DEFI_LIST_REEL           :       0.00 :       0.00 :       0.00 :       0.00 *
+     * DEFI_LIST_INST           :       0.02 :       0.00 :       0.02 :       0.01 *
+     * AFFE_MODELE              :       0.00 :       0.00 :       0.00 :       0.00 *
+     *  . part Superviseur      :       0.14 :       0.03 :       0.17 :       0.20 *
+     *  . part Fortran          :       0.03 :       0.00 :       0.03 :       0.01 *
+     ********************************************************************************
+     * TOTAL_JOB                :       0.17 :       0.03 :       0.20 :       0.20 *
+     ********************************************************************************
+    
+    /opt/aster146/14.6/lib/aster/aster_settings.py:262: DeprecationWarning: this command line option is deprecated : --rep_outils
+      coreopts.parse_args(argv or sys.argv)
+    /opt/aster146/14.6/lib/aster/Build/B_JDC.py:125: DeprecationWarning: PY_SSIZE_T_CLEAN will be required for '#' formats
+      self.codex.init(CONTEXT.debug)
+    /opt/aster146/14.6/lib/aster/code_aster/Cata/Legacy/ops.py:153: DeprecationWarning: PY_SSIZE_T_CLEAN will be required for '#' formats
+      self.codex.debut(self)
+    /opt/aster146/14.6/lib/aster/Execution/E_ETAPE.py:102: DeprecationWarning: PY_SSIZE_T_CLEAN will be required for '#' formats
+      self.codex.register_type(self.sd.nom, astype)
+    /opt/aster146/14.6/lib/aster/Execution/E_ETAPE.py:103: DeprecationWarning: PY_SSIZE_T_CLEAN will be required for '#' formats
+      self.codex.oper(self, self.jdc.jxveri)
+    ERREUR A L'INTERPRETATION DANS ACCAS - INTERRUPTION
+    >> JDC.py : DEBUT RAPPORT
+    CR phase d'initialisation
+       Etape : AFFE_CARA_ELEM    ligne : 25    fichier : 'fort.1'
+          MEMBRANE
+             !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+             ! Règle(s) non respectée(s) :                                               !
+             ! - Il ne faut qu un mot clé parmi : ('ANGL_REP_1', 'ANGL_REP_2', 'VECT_1', !
+             ! 'VECT_2')                                                                 !
+             !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+          Fin MEMBRANE
+       Fin Etape : AFFE_CARA_ELEM
+    fin CR phase d'initialisation
+    
+    >> JDC.py : FIN RAPPORT
+    EXECUTION_CODE_ASTER_EXIT_213799=1
+    
+    +++ STANDARD ERROR:
+    
+    +++ END
+
+>>> 2024/08/08-14:20:03.474  [_diag_erre@/opt/aster146/lib/python3.8/site-packages/asrun/build.py:1499]
+n_debut=1, n_fin=0, mess=False : ok=False
+
+>>> 2024/08/08-14:20:03.474  [_diag_erre@/opt/aster146/lib/python3.8/site-packages/asrun/build.py:1500]
+alarm=True, errs=False, fatal=False, exitcode=1
+
+>>> 2024/08/08-14:20:03.474  [getDiag@/opt/aster146/lib/python3.8/site-packages/asrun/build.py:1213]
+Fichier : fort.6
+_diag_erre : None
+
+>>> 2024/08/08-14:20:03.475  [Shell@/opt/aster146/lib/python3.8/site-packages/asrun/system.py:519]
+remote command ( <> WIN-GMJLJ727QD5 and hui <> hui) ? False
+
+>>> 2024/08/08-14:20:03.475  [execute@/opt/aster146/lib/python3.8/site-packages/asrun/execution.py:496]
+cmd :
+ls -la . REPE_OUT
+background : False
+follow_output : False
+
+>>> 2024/08/08-14:20:03.480  [Mess@/opt/aster146/lib/python3.8/site-packages/asrun/run.py:638]
+Warning or error raised :
+<A>_COPYFILE no such file or directory: fort.80
+Traceback:
+  File "<string>", line 1, in <module>
+  File "/opt/aster146/lib/python3.8/site-packages/asrun/main.py", line 109, in main
+    start()
+  File "/opt/aster146/lib/python3.8/site-packages/asrun/main.py", line 92, in start
+    meth(run, *args)
+  File "/opt/aster146/lib/python3.8/site-packages/asrun/execute.py", line 456, in RunAster
+    copyfiles(run, 'RESU', prof, copybase, emit_alarm)
+  File "/opt/aster146/lib/python3.8/site-packages/asrun/execution.py", line 536, in copyfiles
+    copyfileR(run, df, copybase, alarm)
+  File "/opt/aster146/lib/python3.8/site-packages/asrun/execution.py", line 670, in copyfileR
+    run.Mess(ufmt("no such file or directory: %s", fname), '<A>_COPYFILE')
+  File "/opt/aster146/lib/python3.8/site-packages/asrun/run.py", line 638, in Mess
+    self.DBG('Warning or error raised :', '%s %s' % (cod, msg),
+  File "/opt/aster146/lib/python3.8/site-packages/asrun/run.py", line 816, in DBG
+    self._printDBG(print_traceback=print_traceback, file=ferr,
+  File "/opt/aster146/lib/python3.8/site-packages/asrun/run.py", line 773, in _printDBG
+    stack = traceback.format_stack(limit=10)
+
+
+
+>>> 2024/08/08-14:20:03.481  [Mess@/opt/aster146/lib/python3.8/site-packages/asrun/run.py:638]
+Warning or error raised :
+<A>_COPYFILE no such file or directory: fort.10
+Traceback:
+  File "<string>", line 1, in <module>
+  File "/opt/aster146/lib/python3.8/site-packages/asrun/main.py", line 109, in main
+    start()
+  File "/opt/aster146/lib/python3.8/site-packages/asrun/main.py", line 92, in start
+    meth(run, *args)
+  File "/opt/aster146/lib/python3.8/site-packages/asrun/execute.py", line 456, in RunAster
+    copyfiles(run, 'RESU', prof, copybase, emit_alarm)
+  File "/opt/aster146/lib/python3.8/site-packages/asrun/execution.py", line 536, in copyfiles
+    copyfileR(run, df, copybase, alarm)
+  File "/opt/aster146/lib/python3.8/site-packages/asrun/execution.py", line 670, in copyfileR
+    run.Mess(ufmt("no such file or directory: %s", fname), '<A>_COPYFILE')
+  File "/opt/aster146/lib/python3.8/site-packages/asrun/run.py", line 638, in Mess
+    self.DBG('Warning or error raised :', '%s %s' % (cod, msg),
+  File "/opt/aster146/lib/python3.8/site-packages/asrun/run.py", line 816, in DBG
+    self._printDBG(print_traceback=print_traceback, file=ferr,
+  File "/opt/aster146/lib/python3.8/site-packages/asrun/run.py", line 773, in _printDBG
+    stack = traceback.format_stack(limit=10)
+
+
+
+>>> 2024/08/08-14:20:03.481  [copyfileR@/opt/aster146/lib/python3.8/site-packages/asrun/execution.py:673]
+source list : ('fort.6',)
+destination : /home/hui/Documents/gitHubREPO/membraneAster/AsterModel/asteroutput/mess.log
+
+>>> 2024/08/08-14:20:03.481  [copyfileR@/opt/aster146/lib/python3.8/site-packages/asrun/execution.py:673]
+cmd :
+cp -L -r fort.6 /home/hui/Documents/gitHubREPO/membraneAster/AsterModel/asteroutput/mess.log
+background : False
+follow_output : False
+
+>>> 2024/08/08-14:20:03.484  [Mess@/opt/aster146/lib/python3.8/site-packages/asrun/run.py:638]
+Warning or error raised :
+<F>_ABNORMAL_ABORT Code_Aster run ended
+Traceback:
+  File "<string>", line 1, in <module>
+  File "/opt/aster146/lib/python3.8/site-packages/asrun/main.py", line 109, in main
+    start()
+  File "/opt/aster146/lib/python3.8/site-packages/asrun/main.py", line 92, in start
+    meth(run, *args)
+  File "/opt/aster146/lib/python3.8/site-packages/asrun/execute.py", line 461, in RunAster
+    run.Mess(_('Code_Aster run ended'), diag)
+  File "/opt/aster146/lib/python3.8/site-packages/asrun/run.py", line 638, in Mess
+    self.DBG('Warning or error raised :', '%s %s' % (cod, msg),
+  File "/opt/aster146/lib/python3.8/site-packages/asrun/run.py", line 816, in DBG
+    self._printDBG(print_traceback=print_traceback, file=ferr,
+  File "/opt/aster146/lib/python3.8/site-packages/asrun/run.py", line 773, in _printDBG
+    stack = traceback.format_stack(limit=10)
+
+
+
+>>> 2024/08/08-14:20:03.485  [Shell@/opt/aster146/lib/python3.8/site-packages/asrun/system.py:519]
+remote command ( <> WIN-GMJLJ727QD5 and hui <> hui) ? False
+
+>>> 2024/08/08-14:20:03.485  [_clear_tmp@/opt/aster146/lib/python3.8/site-packages/asrun/run.py:483]
+cmd :
+\rm -rf /tmp/astk_hui/hui-WIN-GMJLJ727QD5-profil_astk_213799
+background : False
+follow_output : False
+
+>>> 2024/08/08-14:20:03.488  [Shell@/opt/aster146/lib/python3.8/site-packages/asrun/system.py:519]
+remote command ( <> WIN-GMJLJ727QD5 and hui <> hui) ? False
+
+>>> 2024/08/08-14:20:03.488  [_clear_tmp@/opt/aster146/lib/python3.8/site-packages/asrun/run.py:483]
+cmd :
+\rm -rf /tmp/hui-RANDOMNUMBER
+background : False
+follow_output : False
+
+>>> 2024/08/08-14:20:03.491  [Sortie@/opt/aster146/lib/python3.8/site-packages/asrun/run.py:732]
+exit 4

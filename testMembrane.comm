@@ -1,0 +1,115 @@
+dt = 0.02
+duration = 10
+itimes = 500
+tend = 10.0
+loadr=[] 
+DEBUT(PAR_LOT='NON',IGNORE_ALARM=('SUPERVIS_25', 'DISCRETE_26', 'UTILITAI8_56'))
+
+# read mesh
+mesh = LIRE_MAILLAGE(UNITE=20)
+listr = DEFI_LIST_REEL(DEBUT=0.0,
+                       INTERVALLE=_F(JUSQU_A=tend, PAS=dt))
+
+times = DEFI_LIST_INST(DEFI_LIST=_F(LIST_INST=listr, PAS_MINI=1e-8),
+                       METHODE='AUTO')
+model = AFFE_MODELE(AFFE=(
+                            _F(GROUP_MA=('net' ),
+                              MODELISATION=('MEMBRANE'),
+                              PHENOMENE='MECANIQUE'),
+                            _F(GROUP_MA=('edge1','edge2','edge3','edge4'),
+                              MODELISATION=('CABLE'),
+                              PHENOMENE='MECANIQUE'), ),
+                     MAILLAGE=mesh)
+ 
+## define element geometrical properties 
+elemprop = AFFE_CARA_ELEM(
+                    POUTRE=( ),
+                        MEMBRANE=(
+                                _F(GROUP_MA=('net'),
+                                   ANGL_REP_1=(0.0, 1.0),
+                                   ANGL_REP_2=(1.0, 0.0),
+                                   EPAIS=1,),),
+                        CABLE=( 
+                                _F(GROUP_MA=('edge1','edge2','edge3','edge4'),
+                                   N_INIT=0.2,  
+                                   SECTION=0.000201,),),                  
+                MODELE=model)
+## material base
+
+mat_1 = DEFI_MATERIAU(ELAS_MEMBRANE=_F(RHO=0.10252, # mass per unit area RHO (density)
+                                            #These coefficients have the dimension of a force per length.
+                                            M_LLLL=2100000000.0,   #Axial Stiffness along the x-axis.
+                                            M_TTTT=2100000000.0,   #Axial Stiffness along the y-axis.
+                                            M_LLLT=0.001,  #Shear Stiffness
+                                            M_LLTT=0.2,   #Coupling between normal stresses in different directions (x-direction stress influencing y-direction strain and vice versa).
+                                            M_LTLT=0.001,  #Coupling between normal stresses and shear strains
+                                            M_TTLT=0.001,  #Coupling between normal stresses and shear strains
+                                            ))
+mat_5 = DEFI_MATERIAU(CABLE=_F(EC_SUR_E=0.0001),
+                                ELAS=_F(E=2100000000.0,
+                                        NU=0.2,
+                                        RHO=910.0))
+
+ ## assign material
+fieldmat = AFFE_MATERIAU(AFFE=(
+                            _F(GROUP_MA=('net'),
+                                MATER=(mat_1)),
+                            _F(GROUP_MA=('edge1','edge2','edge3','edge4'),
+                                MATER=(mat_5)), ),
+                         MODELE=model)
+
+### add load
+gF = AFFE_CHAR_MECA(PESANTEUR=_F(DIRECTION=(0.0, 0.0, -1.0),
+                                 GRAVITE=9.81,),
+                        MODELE=model)
+# fixed node
+fixed = AFFE_CHAR_MECA(DDL_IMPO=_F(GROUP_NO=('edge1Node'),
+                                   DX=0,
+                                   DY=0,
+                                   DZ=0),
+                       MODELE=model)
+    
+# point load on node
+pload = AFFE_CHAR_MECA(FORCE_NODALE=( 
+                                    _F(GROUP_NO=('edge3Node'),
+                                    FX=0,
+                                    FY=-10,
+                                    FZ=0,
+                                    ),
+                                    ),
+                       MODELE=model)
+                  
+loadr.append( _F(CHARGE=gF), )       
+loadr.append( _F(CHARGE=fixed), )       
+loadr.append( _F(CHARGE=pload), )
+
+# define the dynamic solver
+
+resn = DYNA_NON_LINE(CARA_ELEM=elemprop,
+                    CHAM_MATER=fieldmat,
+                    COMPORTEMENT=(_F(DEFORMATION='GROT_GDEP',
+                                     GROUP_MA=('edge1','edge2','edge3','edge4',
+                                                ),
+                                     RELATION='CABLE'),),
+                    CONVERGENCE=_F(ITER_GLOB_MAXI=1000,
+                                   RESI_GLOB_RELA=0.0001 ),
+                    EXCIT=(loadr),
+                    SCHEMA_TEMPS=_F(FORMULATION='DEPLACEMENT',
+                                   SCHEMA="HHT",
+                                   ALPHA=-0.3,
+                                   ),
+                                   #add damping stablize the oscilations Need to study in the future
+                    INCREMENT=_F(LIST_INST=times),
+                    MODELE=model)
+    
+# write results
+IMPR_RESU(FORMAT='MED',
+          RESU=(_F(CARA_ELEM=elemprop,
+                   LIST_INST=listr,
+                   NOM_CHAM=('DEPL', 'SIEF_ELGA'),
+                   RESULTAT=resn,
+                   TOUT_CMP='OUI'),
+                ),
+          UNITE=80)
+
+FIN()
